@@ -1,7 +1,7 @@
 {
   "name": "pkg-placeholder",
   "type": "module",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.1-beta.0",
   "packageManager": "pnpm@8.15.1",
   "description": "_description_",
   "author": "Muhammad Yusuf <https://github.com/iamyuu>",
@@ -42,7 +42,7 @@
     "build": "tsup src/index.ts --format esm,cjs --dts --external react",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
-    "release": "bumpp && npm publish",
+    "release": "bumpp",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks"
