@@ -72,10 +72,10 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v2
 
-      - name: Set node ${{ matrix.node }}
+      - name: Set node
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: lts/*
 
       - name: Setup
         run: npm i -g @antfu/ni
