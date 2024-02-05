@@ -28,6 +28,12 @@ jobs:
         with:
           node-version: lts/*
 
+      - name: Setup
+        run: npm i -g @antfu/ni
+
+      - name: Install
+        run: nci
+
       - run: npm publish
 
       - run: npx changelogithub

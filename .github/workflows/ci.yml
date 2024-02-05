@@ -60,12 +60,6 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node: [lts/*]
-      fail-fast: false
-
     steps:
       - uses: actions/checkout@v3
 
