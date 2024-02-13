@@ -27,6 +27,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: lts/*
+          registry-url: https://npm.pkg.github.com/
+          scope: ${{ github.repository_owner }}
 
       - name: Setup
         run: npm i -g @antfu/ni
@@ -35,6 +37,8 @@ jobs:
         run: nci
 
       - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: npx changelogithub
         env:
